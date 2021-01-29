@@ -12,7 +12,7 @@ function LoginForm({ history }) {
 
   const dispatch = useDispatch()
 
-  const [{email, password}, setState, newState] = useForm({
+  const [{email, password}, setState] = useForm({
     email: "", password: ""
   })
 

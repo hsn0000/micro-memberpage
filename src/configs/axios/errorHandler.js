@@ -10,7 +10,7 @@ export default function errorHandler(error) {
       const originalRequest = error.config
       if (error.response.status === 500)
         message = "Something went terribly wrong";
-      else if (error.response.status == 403 && !originalRequest._retry) {
+      else if (error.response.status === 403 && !originalRequest._retry) {
         originalRequest._retry = true
         const session = localStorage['BWAMICRO:token'] ? JSON.parse(localStorage['BWAMICRO:token']) : null
         return users.refresh({refresh_token: session.refresh_token, email: session.email}).then( res => {

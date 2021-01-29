@@ -26,7 +26,7 @@ function Sidebar({match, history}) {
         <div className="flex flex-col text-center mt-8">
           <div className="border border-indigo-500 mx-auto p-2 inline-flex rounded-full overflow-hidden mb-3">
             {
-              USERS?.avatar ? <img src={USERS?.avatar} alt={USERS?.name} className="object-cover w-24 h-24 rounded-full" /> : 
+              USERS?.avatar ? <img src={USERS?.avatar} alt={USERS?.name ?? "avatar"} className="object-cover w-24 h-24 rounded-full" /> : 
               <DefaultUser className="fill-indigo-500 object-cover w-24 h-24 rounded-full" ></DefaultUser>
             }
           </div>
