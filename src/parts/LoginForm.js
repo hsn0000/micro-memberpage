@@ -52,7 +52,7 @@ function LoginForm({ history }) {
 
   return (
     <div className="flex justify-center items-center pb-24">
-      <div className="w-3/12">
+      <div className="w-full sm:w-3/12">
         <h1 className="text-4xl text-gray-900 mb-6">
           <span className="font-bold">Continue</span> Study, <br/>
           Finish your <span className="font-bold">Goals</span>

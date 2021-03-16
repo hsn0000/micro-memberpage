@@ -39,7 +39,7 @@ export default function DetailsClass({ match, history }) {
     currentLesson = currentChapter?.lessons?.find( lesson => lesson.video === match.params.uid ) ??
                     currentChapter?.lessons?.[0];
   }
-console.log(match.params.class, match.params.uid, match.params, COURSES)
+
   function nextVideo() {}
 
   return (
@@ -49,10 +49,11 @@ console.log(match.params.class, match.params.uid, match.params, COURSES)
           <SidebarClass data={COURSES.data[match.params.class]} defaultUri={`/courses/${match.params.class}/${currentChapter.id}/${currentLesson.video}`}></SidebarClass>
 
           <main className="flex-1">
-            <div className="px-16">
-              <section className="flex flex-col mt-8">
-                <h1 className="text-4xl text-gray-900 font-medium">{currentLesson?.name ?? "Lesson Name"}</h1>
-                <p className="text-lg text-gray-600">Materi bagian dari {currentChapter?.name ?? "Chapter Name"}</p>
+            <div className="px-4 sm:px-16">
+              <section className="flex flex-col mt-8 pl-12 sm:pl-0">
+                <h1 className="text-xl
+                 sm:text-4xl text-gray-900 font-medium">{currentLesson?.name ?? "Lesson Name"}</h1>
+                <p className="text-sm sm:text-lg text-gray-600">Materi bagian dari {currentChapter?.name ?? "Chapter Name"}</p>
               </section>
 
               <section className="flex flex-col mt-8">

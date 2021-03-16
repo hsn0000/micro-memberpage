@@ -8,8 +8,8 @@ import ListClassItem from 'parts/ListClassItem'
 import Loading from "parts/Loading"
 
 function EmptyState() {
-  return <section className="flex h-screen items-center">
-    <div className="text-center py-12 mx-auto w-5/12">
+  return <section className="flex h-screen items-center relative z-50 bg-white">
+    <div className="text-center py-12 mx-auto w-full sm:w-5/12">
       <img src={`${process.env.PUBLIC_URL}/assets/images/illustration-myclass-empty.jpg`} alt="success join class"/>
         <h1 className="text-3xl text-gray-900 mt-12">Time to Invest</h1>
         <p className="text-lg text-gray-900 mt-4 mb-8 mx-auto text-center">
@@ -48,19 +48,19 @@ export default function MyClass() {
     <div className="flex">
       <Sidebar></Sidebar>
       <main className="flex-1">
-        <div className="px-16">
+        <div className="px-4 sm:px-16">
           {COURSES.status === "loading" && <Loading></Loading>}
           {COURSES.status === "error" && COURSES.message}
           {COURSES.status === "ok" && COURSES.total > 0 ? 
             <> 
-              <section className="flex flex-col mt-8">
-                <h1 className="text-4xl text-gray-900 font-medium">My Class</h1>
-                <p className="text-lg text-gray-600">
+              <section className="flex flex-col mt-8 pl-12 sm:pl-0">
+                <h1 className="text-xl sm:text-4xl text-gray-900 font-medium">My Class</h1>
+                <p className="text-xl sm:text-lg text-gray-600">
                   Continue learning to pursue your dream
                 </p>
               </section>
               <section className="flex flex-col mt-8">
-                <div className="flex justify-start items-center -mx-4">
+                <div className="flex flex-wrap justify-start items-center -mx-4">
                   {
                     Object.values(COURSES.data)?.map?.( (item, index) => {
                       return <ListClassItem data={item.course} key={index}></ListClassItem>

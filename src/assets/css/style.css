@@ -18644,13 +18644,7 @@ video {
 aside .overlay {
   --bg-opacity: 1;
   background-color: #000;
-  background-color: rgba(0, 0, 0, var(--bg-opacity));
-  opacity: 0.25;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: fixed;
+  background-color: rgba(0, 0, 0, var(--bg-opacity)); opacity: 0.25; top: 0; right: 0; bottom: 0; left: 0; position: fixed;
   content: "";
   z-index: 9;
   width: 100vw;

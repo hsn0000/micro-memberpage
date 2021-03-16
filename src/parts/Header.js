@@ -40,7 +40,7 @@ function Header({ onLight, location }) {
         className={[
           "transition-all duration-200 items-center fixed inset-0 bg-indigo-1000 pt-24 md:pt-0 md:bg-transparent md:relative md:flex md:opacity-100 md:visible",
           toggleMenu ? "opacity-100 visible z-20" : "opacity-0 invisible",
-        ].join(" ")}
+        ].join(" ")} 
       >
         <li className="leading-10">
           <Link

@@ -5,6 +5,7 @@ import { ReactComponent as ArrowBack } from "assets/images/icon-arrow-back.svg";
 import { Link, withRouter } from "react-router-dom";
 
 function SidebarClass({ data, match, defaultUri }) {
+  
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
   const getNavLinkClass = (path) => {
