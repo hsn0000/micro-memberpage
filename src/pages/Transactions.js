@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import {Link, useLocation} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 
@@ -11,7 +11,7 @@ import order from 'constants/api/orders'
 import Loading from 'parts/Loading'
 
 import {statusOrders, fetchOrders, messageOrder} from 'store/actions/orders'
-import orders from 'store/reducers/orders'
+// import orders from 'store/reducers/orders'
 import Congratulation from 'parts/Congratulation'
 import EmptyState from 'parts/EmptyState'
 
